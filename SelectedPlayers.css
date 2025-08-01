@@ -12,7 +12,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Changed to flex-start */
+  padding: 20px; /* Added padding */
 }
 
 /* Center content styling */
@@ -207,3 +208,47 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+#searchBar {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#alphabetScrollBar {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  background-color: #008080 ; /* rgba(255, 255, 255, 0.8); */
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.alphabet-letter {
+  cursor: pointer;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.alphabet-letter:hover {
+  background-color: rgba(0, 128, 128, 0.2);
+}
+
+.alphabet-separator {
+  width: 30%; /* Make the separator span the entire width */
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: bold;
+  margin: 10px 0;
+  border-radius: 5px;
+  grid-column: 1 / -1; /* Span across all grid columns */
+}
+

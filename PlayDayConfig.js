@@ -57,6 +57,7 @@ async function commitChanges() {
     checkAndClearSessions();
     let playDayConfig = JSON.parse(localStorage.getItem('PlayDayConfig')) || {};
     playDayConfig.numberToAssign = 0;
+    playDayConfig.currentSession = 0;
     localStorage.setItem('PlayDayConfig', JSON.stringify(playDayConfig));
 
     const csvUrl = "https://raw.githubusercontent.com/jayachandrangs/cbc/main/RiVi_playerlist.csv";
@@ -119,7 +120,7 @@ function processCSVData(csvData) {
                 rested: 0,
                 played: 0,
                 npgroup: 0,
-                nsgroup: 0
+                nsgroup: 0,
             };
             clubmembers.push(player);
         }

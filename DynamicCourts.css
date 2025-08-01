@@ -66,25 +66,16 @@
 
         @media screen and (orientation: portrait) {
             #content {
-                height: 70vh;
-                padding: 5px;
-                display: flex; /* Changed to flexbox for single row */
-                flex-direction: column; /* Display court boxes in a row */
-                overflow-x: auto; /* Enable horizontal scrolling */
-                overflow-y: hidden; /* Hide vertical scrollbar */
-                white-space: nowrap; /* Prevent court boxes from wrapping */
+                flex-direction: column;
             }
         }
         
         @media screen and (orientation: landscape) {
             #content {
-                height: 70vh;
-                padding: 5px;
-                display: flex; /* Changed to flexbox for single row */
-                flex-direction: row; /* Display court boxes in a row */
-                overflow-x: auto; /* Enable horizontal scrolling */
-                overflow-y: hidden; /* Hide vertical scrollbar */
-                white-space: nowrap; /* Prevent court boxes from wrapping */
+                flex-direction: row;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
             }
         }
 
@@ -111,8 +102,7 @@
         @media screen and (orientation: portrait) {
             .court-box {
                 margin-bottom: 10px;
-                display: inline-block;
-                width: 50%;
+                width: 100%;
             }
         }
         
